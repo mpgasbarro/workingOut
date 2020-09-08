@@ -30,11 +30,14 @@ My app is a library of some of the most common exercises, for specific muscle gr
 
 [
 {
-Workout: String ,
-muscleGroup: String ,
+exercise: String ,
+muscleGroupOne: String ,
+muscleGroupTwo: String,
+muscleGroupThree: String
 levelOfDifficulty: String,
 workoutImageUrl: String,
-workoutVideo: String
+workoutVideoUrl: String,
+description: String
 }]
 
 ### MVP User Stories
