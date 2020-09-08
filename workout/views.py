@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .serializers import WorkoutSerializer
+from .models import Workout
 
-# Create your views here.
+class WorkoutList(generics.ListCreateAPIView):
+    queryset = Workout.objects.all()
+    serializer_class = WorkoutSerializer
+
+class WorkoutDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Workout.objects.all()
+    serializer_class = WorkoutSerializer
