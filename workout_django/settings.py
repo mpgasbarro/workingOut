@@ -30,7 +30,7 @@ DEBUG = True if os.environ['MODE'] == 'dev' else False
 ALLOWED_HOSTS = ['*']
 
 CORS_ALLOWED_ORIGINS = [
-    "https://immense-earth-33685.herokuapp.com",
+    "https://immense-earth-33685.herokuapp.com/workout/?format=json",
     "http://localhost:3000",
     "http://127.0.0.1:3000"
 ]
@@ -39,7 +39,7 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny'
     ]
 }
 
